@@ -26,7 +26,7 @@ export function convert(html: string, options: { indent: { with: string, size: n
         let attrs = Object.keys(attributes).map((attribute) => {
             let value = attributes[attribute];
             if (attribute === 'style') {
-                return attribute + ' [ ' + utils.styleToElm(value).join(', ') + ' ]';
+                return "Style" + ' [ ' + utils.styleToElm(value).join('; ') + ' ]';
             }
             if (attribute === 'class') {
                 attribute = 'ClassName';
