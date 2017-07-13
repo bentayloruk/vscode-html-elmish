@@ -1,4 +1,4 @@
-*This extension is not in the VS Code marketplace yet, as it's pretty rough right now.  However, the fast and furious can try an [early VSIX](https://www.dropbox.com/s/54sl0z5lcsrdztm/vscode-html-to-elmish-0.0.7.vsix?dl=1).  It will save you time already.*
+*This extension is not in the VS Code marketplace yet, as it's pretty rough right now.  However, the fast and furious can try an [early VSIX 0.8](https://www.dropbox.com/s/ntb4fjkiifjxqce/vscode-html-to-elmish-0.0.8.vsix?dl=1).  It will save you time already.*
 
 # HTML-to-Elmish for Visual Studio Code
 
