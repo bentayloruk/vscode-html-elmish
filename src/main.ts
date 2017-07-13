@@ -26,7 +26,7 @@ let convert = () => {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    context.subscriptions.push(vscode.commands.registerCommand('htmlToElm.convert', convert));
+    context.subscriptions.push(vscode.commands.registerCommand('htmlToElmish.convert', convert));
 }
 
 export function deactivate() {

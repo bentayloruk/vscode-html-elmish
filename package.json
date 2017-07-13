@@ -28,13 +28,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:htmlToElm.convert"
+    "onCommand:htmlToElmish.convert"
   ],
   "main": "./out/src/main",
   "contributes": {
     "commands": [
       {
-        "command": "htmlToElm.convert",
+        "command": "htmlToElmish.convert",
         "title": "HTML: convert to Elmish",
         "description": "Converts your selection to Elmish by assuming that your selection is HTML code"
       }
