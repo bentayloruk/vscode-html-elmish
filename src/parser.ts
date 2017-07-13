@@ -1,6 +1,6 @@
 'use strict';
 
-import {Parser} from 'htmlparser2';
+import { Parser } from 'htmlparser2';
 import * as utils from './utils';
 
 
