@@ -10,13 +10,14 @@ import * as assert from 'assert';
 // as well as import your extension to test it
 import * as vscode from 'vscode';
 import * as myExtension from '../src/main';
+import * as parser from '../src/parser';
 
 // Defines a Mocha test suite to group tests of similar kind together
-suite("Extension Tests", () => {
+suite("Parser Tests", () => {
 
     // Defines a Mocha unit test
-    test("Something 1", () => {
-        assert.equal(-1, [1, 2, 3].indexOf(5));
-        assert.equal(-1, [1, 2, 3].indexOf(0));
+    test("Convert multiple value style attr", () => {
+        const elmish = parser.convert("<h1 style='color:blue;text-align:center'></h1>", { indent: { with: " ", size: 4 } });
+        assert.equal(elmish, "h1 [ Style [ !!( \"color\", \"blue\" ); !!( \"text-align\", \"center\" ) ] ] [\n    ]");
     });
 });
