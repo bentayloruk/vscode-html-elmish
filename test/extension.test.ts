@@ -15,9 +15,15 @@ import * as parser from '../src/parser';
 // Defines a Mocha test suite to group tests of similar kind together
 suite("Parser Tests", () => {
 
-    // Defines a Mocha unit test
     test("Convert multiple value style attr", () => {
         const elmish = parser.convert("<h1 style='color:blue;text-align:center'></h1>", { indent: { with: " ", size: 4 } });
+        // TODO the newline at the end of this test looks wonky.
         assert.equal(elmish, "h1 [ Style [ !!( \"color\", \"blue\" ); !!( \"text-align\", \"center\" ) ] ] [\n    ]");
     });
+
+    test("React elements without children", () => {
+        const elmish = parser.convert("<br/><input></input><img></img><embed/><MeTa/>", { indent: { with: " ", size: 4 } });
+        assert.equal(elmish, "br []\ninput []\nimg []\nembed []\nmeta []");
+    });
+
 });
