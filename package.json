@@ -2,7 +2,7 @@
   "name": "vscode-html-to-elmish",
   "displayName": "HTML to Elmish",
   "description": "VSCode plugin to convert HTML to Elmish",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "publisher": "bentayloruk",
   "license": "MIT",
   "engines": {

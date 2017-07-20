@@ -33,7 +33,9 @@ export function convert(html: string, options: { indent: { with: string, size: n
             } else if (attribute === 'class') {
                 attribute = 'ClassName';
             } else if (attribute.startsWith("data-")) {
-                // TODO handle data.
+                // Wrap up the attribute and value.
+                // TODO I'm not sure if all values should be a string...
+                return attribute = '!!("' + attribute + '", "' + value + '")';
             } else {
                 attribute = attribute.charAt(0).toUpperCase() + attribute.slice(1);
             }
